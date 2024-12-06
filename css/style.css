@@ -1,0 +1,217 @@
+body {
+    background-color: #24353F;
+    font-family: 'Titillium Web', sans-serif;
+    height: 70vh;
+    margin: 0;
+}
+
+.container {
+    width: 60%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-box {
+    background-color: #24353F;
+    padding: 3rem;
+    border-radius: 3px;
+    box-shadow: -5px 2px 54px -9px rgba(0, 0, 0, 1);
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #17A2B8;
+    font-weight: 500;
+    margin-bottom: .5rem;
+    line-height: 1.2;
+}
+
+button {
+    width: 100%;
+    padding: 8px;
+    background-color: #24353F;
+    border: 1px solid #17A2B8;
+    border-radius: 5px;
+    color: #17A2B8;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #17A2B8;
+    color: #fff;
+}
+
+p {
+    margin-top: 8px;
+}
+
+span {
+    color: #5bc0de;
+    cursor: pointer;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin: 6px 0;
+    border: 1px solid #CED4DA;
+    border-radius: 5px;
+    background: #24353F;
+    color: #fff;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input::placeholder {
+    color: #B6B6B6;
+    opacity: 1;
+}
+
+input:focus {
+    border: 1px solid #80BDFF;
+}
+
+#signUpLink:hover,
+#loginLink:hover {
+    color: #fff;
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+#signupUsername,
+#signupEmail {
+    padding: 8px;
+    margin: 6px 0;
+}
+
+#password {
+    padding: 8px;
+    margin: 10px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+    z-index: 100;
+}
+
+.navbrand {
+    color: white;
+    font-size: 20px;
+    padding: 10px 50px;
+    border-radius: 5px;
+}
+
+.logout-content {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#logoutBtn {
+    padding: 5px 15px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, .5);
+    background-color: transparent;
+    border: 1px solid orange;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+#logoutBtn:hover {
+    background-color: orange;
+    color: white;
+}
+
+.welcome-message {
+    text-align: center;
+}
+
+.welcome-message h2 {
+    color: #5bc0de;
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .container {
+        width: 80%;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        width: 90%;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    button {
+        font-size: 14px;
+    }
+    .form-box {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+    .form-box {
+        padding: 1.5rem;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+    input, button {
+        font-size: 14px;
+    }
+    #logoutBtn {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+    }
+    .navbrand {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .logout-content {
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.6rem;
+    }
+    .form-box {
+        padding: 1rem;
+    }
+    input, button {
+        font-size: 12px;
+    }
+    .navbar {
+        padding: 10px;
+    }
+    .navbrand {
+        font-size: 16px;
+    }
+}

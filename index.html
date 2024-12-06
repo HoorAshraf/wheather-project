@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Login System</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="d-flex justify-content-center align-items-center text-white">
+  <div class="container">
+    <!-- Login Form -->
+    <div id="loginForm" class="form-box">
+      <h1>Smart Login System</h1>
+      <div id="alertContainer"></div> <!-- Alert container for dynamic messages -->
+      <input type="email" id="loginEmail" placeholder="Enter your Email" required>
+      <input type="password" id="loginPassword" placeholder="Enter your Password" required>
+      <button id="loginBtn" class="mt-4 mb-1 p-2">Login</button>
+      <p>Don't have an account? <span id="signUpLink" style="cursor: pointer; color: #fff;">Sign Up</span></p>
+    </div>
+
+    <!-- Sign-Up Form -->
+    <div id="signupForm" class="form-box" style="display: none;">
+      <h1>Create an Account</h1>
+      <input type="text" id="signupUsername" placeholder="Enter your Username" required>
+      <input type="email" id="signupEmail" placeholder="Enter your Email" required>
+      <input type="password" id="signupPassword" placeholder="Enter your Password" required>
+      <button class="mt-4 p-2" id="signupBtn">Sign Up</button>
+      <p class="pb-2 pt-1">You have an account? <span id="loginLink" style="cursor: pointer; color: #fff;">Signin</span></p>
+    </div>
+
+    <!-- Welcome Page -->
+    <div id="welcomePage" class="form-box" style="display: none;">
+      <header class="navbar navbar-expand-lg navbar-dark ">
+        <!-- Brand Name (Smart Login) -->
+        <a class="navbar-brand" href="#">SMART LOGIN</a>
+        
+        <!-- Toggle Button for Navbar Collapse -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <button id="logoutBtn" class="btn btn-outline-light">Logout</button>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+      <div class="welcome-message text-center">
+        <h2>Welcome, <span id="welcomeUsername"></span></h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (including jQuery and Popper.js for Bootstrap functionality) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Custom JavaScript -->
+  <script src="js/style.js"></script>
+</body>
+</html>
