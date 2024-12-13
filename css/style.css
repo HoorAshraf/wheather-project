@@ -1,217 +1,223 @@
 body {
-    background-color: #24353F;
-    font-family: 'Titillium Web', sans-serif;
-    height: 70vh;
-    margin: 0;
-}
+    background-color: #1e1e2f;
+    font-family: Arial, sans-serif;
+  }
 
-.container {
-    width: 60%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
 
-.form-box {
-    background-color: #24353F;
-    padding: 3rem;
-    border-radius: 3px;
-    box-shadow: -5px 2px 54px -9px rgba(0, 0, 0, 1);
-    text-align: center;
-}
-
-h1 {
-    font-size: 2.5rem;
-    color: #17A2B8;
-    font-weight: 500;
-    margin-bottom: .5rem;
-    line-height: 1.2;
-}
-
-button {
-    width: 100%;
-    padding: 8px;
-    background-color: #24353F;
-    border: 1px solid #17A2B8;
-    border-radius: 5px;
-    color: #17A2B8;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #17A2B8;
-    color: #fff;
-}
-
-p {
-    margin-top: 8px;
-}
-
-span {
-    color: #5bc0de;
-    cursor: pointer;
-}
-
-input {
-    width: 100%;
-    padding: 8px;
-    margin: 6px 0;
-    border: 1px solid #CED4DA;
-    border-radius: 5px;
-    background: #24353F;
-    color: #fff;
-    outline: none;
-    transition: border-color 0.3s ease;
-}
-
-input::placeholder {
-    color: #B6B6B6;
-    opacity: 1;
-}
-
-input:focus {
-    border: 1px solid #80BDFF;
-}
-
-#signUpLink:hover,
-#loginLink:hover {
-    color: #fff;
-    text-decoration: underline;
-    text-underline-position: under;
-}
-
-#signupUsername,
-#signupEmail {
-    padding: 8px;
-    margin: 6px 0;
-}
-
-#password {
-    padding: 8px;
-    margin: 10px 0;
-}
-
+  /* Navbar Brand Image */
+  .navbar-brand img {
+    width: 64px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+/* Navbar */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
-    z-index: 100;
+    background-color: #1e1e2f;
+    margin-top: 20px;
+    color: #fff;
 }
 
-.navbrand {
-    color: white;
-    font-size: 20px;
-    padding: 10px 50px;
-    border-radius: 5px;
-}
-
-.logout-content {
-    display: flex;
-    justify-content: flex-end;
-}
-
-#logoutBtn {
-    padding: 5px 15px;
-    font-size: 14px;
-    color: rgba(255, 255, 255, .5);
-    background-color: transparent;
-    border: 1px solid orange;
+/* Navbar Brand */
+.navbar-brand {
+    color: #fff;
     font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    z-index: 100;
+    font-size: 1.5rem;
 }
 
-#logoutBtn:hover {
-    background-color: orange;
-    color: white;
-}
-
-.welcome-message {
+/* Tagline directly below the Navbar */
+.navbar-tagline {
     text-align: center;
+    font-size: 0.9rem;
+    color: #aaa; /* Lighter color for the tagline */
+    margin-top: 50px;
+    position: relative;
+    right: 110px;
 }
 
-.welcome-message h2 {
-    color: #5bc0de;
-    font-size: 2.5rem;
-    font-weight: 500;
-    line-height: 1.2;
+
+  
+  /* Navbar Links */
+  .navbar-nav {
+    gap: 20px; /* Adds space between links in the navbar */
+  }
+  
+  /* Navbar Collapse */
+  .navbar-collapse {
+    justify-content: flex-end; /* Align navbar links to the right */
+  }
+  
+  /* Default state for navbar links */
+  .navbar-nav .nav-link {
+    color: #fff;
+    padding: 8px 30px; /* More padding for better clickable area */
+    border-radius: 20px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+    text-decoration: none; /* Remove underline */
+    border: 2px solid transparent; /* Transparent border to maintain space */
+  }
+  
+  /* Hover effect for navbar links */
+  .navbar-nav .nav-link:hover , .navbar-toggler:hover {
+    color: #009ad8;  
+    background-color: transparent;  /* Transparent background */
+    border: 2px solid #009ad8;  /* Border color on hover */
+    border-radius: 20px;  /* Rounded corners */
+    box-shadow: 0 0 5px rgba(0, 154, 216, 0.5); /* Subtle shadow on hover */
+  }
+  
+  /* Active link (optional: highlight the active page) */
+  .navbar-nav .nav-item.active .nav-link {
+    color: #ffcc00; /* Active link color */
+  }
+  .navbar-toggler {
+    border: 2px solid transparent;  /* Initially no border */
+    border-radius: 20px;  /* Rounded corners */
+    transition: all 0.3s ease;  /* Smooth transition for all properties */
 }
 
-/* Responsive Styles */
-@media (max-width: 1200px) {
-    .container {
-        width: 80%;
-    }
+.banner {
+  background-image: url('../images/banner.png'); /* Replace with your banner image */
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0;
+  min-height: 350px;
+  text-align: center;
+  position: relative;
+  margin-top: 50px;
 }
 
-@media (max-width: 992px) {
-    .container {
-        width: 90%;
-    }
-    h1 {
-        font-size: 2rem;
-    }
-    button {
-        font-size: 14px;
-    }
-    .form-box {
-        padding: 2rem;
-    }
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2e2e3e;
+  border-radius: 30px;
+  padding: 15px;
+  width: 80%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 768px) {
-    .container {
-        width: 100%;
-    }
-    .form-box {
-        padding: 1.5rem;
-    }
-    h1 {
-        font-size: 1.8rem;
-    }
-    input, button {
-        font-size: 14px;
-    }
-    #logoutBtn {
-        font-size: 12px;
-        padding: 5px 10px;
-    }
-    .navbar {
-        flex-direction: column;
-        padding: 15px;
-    }
-    .navbrand {
-        font-size: 18px;
-        margin-bottom: 10px;
-    }
-    .logout-content {
-        justify-content: center;
-        width: 100%;
-    }
+.search-bar input {
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  outline: none;
 }
 
-@media (max-width: 576px) {
-    h1 {
-        font-size: 1.6rem;
-    }
-    .form-box {
-        padding: 1rem;
-    }
-    input, button {
-        font-size: 12px;
-    }
-    .navbar {
-        padding: 10px;
-    }
-    .navbrand {
-        font-size: 16px;
-    }
+.search-bar button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+}
+
+  
+  
+/* Cards */
+.card {
+  background-color: #2e2e3e;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  transition: all 0.3s ease;
+  height: 400px; /* Ensure uniform height */
+  margin-bottom: 100px;
+  padding: 20px; /* Add padding for better spacing */
+}
+
+.card h5 {
+  margin-bottom: 20px;
+  font-size: 1.5rem; /* Increased font size */
+}
+
+.card h3 {
+  font-size: 2rem; /* Increased font size */
+  font-weight: bold; /* Make it bolder */
+  margin-bottom: 20px; /* Space between temperature and other content */
+}
+
+.card p {
+  font-size: 1.1rem; /* Increased font size for condition text */
+}
+
+.card .details span {
+  font-size: 1rem; /* Increased font size for details */
+}
+
+.card i {
+  color: #f6ff79;
+  font-size: 2.8rem; /* Increased icon size for better visibility */
+}
+
+.card:hover {
+  background-color: #333;
+}
+
+/* Additional spacing adjustments */
+.card .details {
+  font-size: 1.1rem;
+}
+/* Smaller Icons in the Details Section */
+.card .details span i {
+  font-size: 1.5rem; /* Smaller size for icons inside the details section */
+}
+
+/* If you want to make the icons inside the details section even smaller */
+.card .details span i {
+  font-size: 1.2rem; /* Adjust this as per your preference */
+}
+/* Change the color of the humidity icon */
+.card .details span i.fas.fa-tint  {
+  color: #09c;  /* Apply the desired color */
+}
+
+/* Change the color of the humidity icon */
+.card .details span i.fas.fa-wind  {
+  color: rgb(57, 30, 231);  /* Apply the desired color */
+}
+/* Change the color of the humidity icon */
+.card .details span i.fas.fa-compass  {
+  color: rgb(255, 51, 0);  /* Apply the desired color */
+}
+
+
+
+/* Footer */
+.footer {
+    background-color: #262936;
+}
+
+.footer input {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+
+.footer button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+}
+
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icon {
+    font-size: 20px;
+    color: #fff;
+    margin: 0 15px;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #009ad8;
+}
+
+.social-icon i {
+    font-size: 25px;
 }
